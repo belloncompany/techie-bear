@@ -1,0 +1,53 @@
+### Get all menu items
+GET http://localhost:3000/api/menu
+Accept: application/json
+
+### Get specific menu item
+GET http://localhost:3000/api/menu/main_1
+Accept: application/json
+
+### Create a new order
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+    "items": [
+        {
+            "menuItemId": "main_1",
+            "quantity": 2
+        },
+        {
+            "menuItemId": "side_1",
+            "quantity": 1
+        }
+    ]
+}
+
+### Get order details
+GET http://localhost:3000/api/orders/1
+Accept: application/json
+
+### Example of invalid order (wrong format)
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+    "items": [
+        {
+            "menuItemId": "main_1"
+        }
+    ]
+}
+
+### Example of order with non-existent menu item
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+    "items": [
+        {
+            "menuItemId": "invalid_id",
+            "quantity": 1
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Drive-Through</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Digital Drive-Through Menu</h1>
+    </header>
+
+    <main>
+        <section class="menu-container">
+            <h2>Menu Items</h2>
+            <div id="menu-items" class="menu-items">
+                <!-- Items will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Your Order</h2>
+            <div id="cartItems">
+                <!-- Cart items will be populated here -->
+            </div>
+            <div class="cart-total">
+                <p>Total: £<span id="totalAmount">0.00</span></p>
+                <button id="purchaseBtn" class="purchase-btn">Place Order</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Digital Drive-Through. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

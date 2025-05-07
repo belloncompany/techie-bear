@@ -1,0 +1,13 @@
+{
+  "name": "techie-bear",
+  "version": "1.0.0",
+  "description": "Restaurant management system",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "init-db": "node server/scripts/initDb.js"
+  },
+  "dependencies": {
+    "pg": "^8.11.3"
+  }
+} 

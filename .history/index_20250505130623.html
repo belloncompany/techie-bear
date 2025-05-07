@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Our Restaurant Menu</h1>
+    </header>
+
+    <main>
+        <section class="menu-container">
+            <div class="menu-category">
+                <h2>Main Courses</h2>
+                <div class="menu-items" id="mainCourses">
+                    <!-- Items will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2>Sides</h2>
+                <div class="menu-items" id="sides">
+                    <!-- Items will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2>Desserts</h2>
+                <div class="menu-items" id="desserts">
+                    <!-- Items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Your Order</h2>
+            <div id="cartItems">
+                <!-- Cart items will be populated here -->
+            </div>
+            <div class="cart-total">
+                <p>Total: £<span id="totalAmount">0.00</span></p>
+                <button id="purchaseBtn" class="purchase-btn">Purchase</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 

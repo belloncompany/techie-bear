@@ -1,0 +1,220 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-color: #f5f6fa;
+    --text-color: #2c3e50;
+    --border-radius: 8px;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.menu-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.menu-item {
+    background: white;
+    border: 1px solid #e1e1e1;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.menu-item button:hover {
+    background-color: #2980b9;
+}
+
+.cart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.cart h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.cart-item button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.cart-item button:hover {
+    background-color: #c0392b;
+}
+
+.cart-total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #e1e1e1;
+}
+
+.cart-total p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.purchase-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.purchase-btn:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart {
+        position: static;
+        margin-top: 2rem;
+    }
+}
+
+.menu-category {
+    margin-bottom: 2rem;
+}
+
+.category-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.category-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.menu-item-unavailable {
+    opacity: 0.6;
+    position: relative;
+}
+
+.menu-item-unavailable button {
+    background-color: #ccc !important;
+    cursor: not-allowed;
+}
+
+.unavailable-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Add max quantity message style */
+.menu-item h3 span {
+    font-size: 0.8em;
+    color: #666;
+    font-weight: normal;
+    margin-left: 5px;
+} 
