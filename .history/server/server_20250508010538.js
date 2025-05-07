@@ -8,12 +8,7 @@ const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors({
-    origin: [
-        'http://127.0.0.1:8000',
-        'https://belloncompany.github.io',
-        'https://belloncompany.github.io/techie-bear',
-        'https://belloncompany.github.io/techie-bear/ui'
-    ],
+    origin: ['http://127.0.0.1:8000','https://belloncompany.github.io/techie-bear/ui/'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type']
 }));
