@@ -12,8 +12,8 @@ app.use(cors({
         'http://127.0.0.1:8000',
         'https://belloncompany.github.io',
         'https://belloncompany.github.io/techie-bear',
-        'https://belloncompany.github.io/techie-bear/ui',
-        'https://belloncompany.com/ui/'
+        'https://belloncompany.github.io/techie-bear/ui,
+        'https://belloncompany.com/ui/'// '
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type']
