@@ -6,10 +6,10 @@ const sql = fs.readFileSync(path.join(__dirname, 'argentine_menu_data.sql')).toS
 
 db.pool.query(sql)
   .then(() => {
-    console.log('Database populated');
+    console.log('Database initialized');
     process.exit(0);
   })
   .catch(err => {
-    console.error('Error populating database:', err);
+    console.error('Error initializing database:', err);
     process.exit(1);
   });

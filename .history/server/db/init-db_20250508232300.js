@@ -10,6 +10,6 @@ db.pool.query(sql)
     process.exit(0);
   })
   .catch(err => {
-    console.error('Error populating database:', err);
+    console.error('Error initializing database:', err);
     process.exit(1);
   });
